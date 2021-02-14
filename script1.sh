@@ -11,4 +11,3 @@ echo "Starting backup process: "
 aws s3 cp results1.txt s3://nginx-web-server-bucket/
 #sleep 10
 #done
-
