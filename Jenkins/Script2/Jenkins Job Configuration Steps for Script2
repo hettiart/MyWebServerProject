@@ -1,0 +1,16 @@
+Add Git Repository URL of Script under SCM option
+
+Under Build Triggers Option add as - H H * * *
+
+Tick Poll SCM option and add as * * * * * to trigger the job when ever there is a change in script
+
+Under Build Environment option tick user secret files
+
+Under Bindings select secret text files and configure globally configured access keys
+
+Under Build Option select execute shell and ad below code
+
+cd /mnt/c/Users/user/Desktop/Git
+./script2.sh
+
+Under Post Build Option select Email Notification for every unstable build and enter application team email address
