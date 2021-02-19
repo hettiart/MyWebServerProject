@@ -1,3 +1,9 @@
+Globally configured the Access and Sert Keys as secrets
+
+Globally configured for email notifications
+
+Created a free style project as MyWebServerProject and configured below
+
 Add Git Repository URL of Script under SCM option
 
 Under Build Triggers Option add as - H H * * *
