@@ -1,0 +1,20 @@
+Web server project is implemented on terraform.
+
+Atom is used as source code editor for writing terraform code and command execution done bia cmder
+
+Project created as structured here.
+
+Project1 - WebServer - Provider.tf / WebServer.tf
+         - S3 - Provider.tf / S3.tf
+         
+Key Pair is created first before creating EC2
+
+Source Codes are uploaded on this path for web server creation and s3 creation
+
+Once Code is implemented followsing commands were run on the code via cmder on the *.tf file path for infrastructure creation in one attempt
+
+terraform init
+terraform plan
+terraform apply
+
+checked webserver accessibility via public ip on browser
