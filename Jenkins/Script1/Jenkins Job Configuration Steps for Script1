@@ -1,0 +1,16 @@
+Add Git Repo URL in source code management
+
+Add periodical job to trigger as - * 9-16 * * 1-5
+
+Add Job to poll SCM - * * * * *
+
+Use secret file option under build environment option
+
+Add globally configured Access keys under secret texts in Bindings
+
+Under Build Option Choose Execute Shell and add below code
+
+cd /mnt/c/Users/user/Desktop/Git
+./script1.sh
+
+Under Post Build Actions Choose email Notification add the application team mail for unstable builds checked
