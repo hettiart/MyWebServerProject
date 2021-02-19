@@ -1,0 +1,5 @@
+since web server is only availble on 9*5
+
+Jenkins job build trigger should be automated as below in build trigger option
+
+* 9-16 * * 1-5 
