@@ -1,0 +1,5 @@
+$ aws configure 
+AWS Access Key ID [None]: "PUT-YOUR-ACCESS-KEY-HERE"
+AWS Secret Access Key [None]: "PUT-YOUR-SECRET-KEY-HERE"
+Default region name [None]: "PUT-YOUR-REGION-HERE"
+Default output format [None]: None
