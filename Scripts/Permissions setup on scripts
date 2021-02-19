@@ -1,0 +1,58 @@
+SSM Role role created for S3FullAccess attaching to EC2 for copyinng file to S3 befre last step in Script1
+
+Identified commands cannot run remotely on ec2 console, hence edited SSM role adding AmazonSSMMnagedInstanceCore policy and started SSM agent on ec2 before proceeding with script2
+
+To run commands from AWS CLI on EC2 installed session manager plugin on terminal and added a customized policy for SSM Role and Jenkins User and Jenkins Group as below
+
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Effect": "Allow",
+            "Action": [
+                "ssm:StartSession",
+                "ssm:SendCommand"
+            ],
+            "Resource": [
+                "arn:aws:ec2:us-east-1:662525997412:instance/*"
+            ],
+            "Condition": {
+                "StringLike": {
+                    "ssm:resourceTag/Server": [
+                        "WebServer"
+                    ]
+                }
+            }
+        },
+        {
+            "Effect": "Allow",
+            "Action": [
+                "ssm:DescribeSessions",
+                "ssm:GetConnectionStatus",
+                "ssm:DescribeInstanceInformation",
+                "ssm:DescribeInstanceProperties",
+                "ec2:DescribeInstances"
+            ],
+            "Resource": "*"
+        },
+        {
+            "Effect": "Allow",
+            "Action": [
+                "ssm:CreateDocument",
+                "ssm:UpdateDocument",
+                "ssm:GetDocument"
+            ],
+            "Resource": "arn:aws:ssm:us-east-1:662525997412:document/SSM-SessionManagerRunShell"
+        },
+        {
+            "Effect": "Allow",
+            "Action": [
+                "ssm:TerminateSession"
+            ],
+            "Resource": [
+                "arn:aws:ssm:*:*:session/${aws:username}-*"
+            ]
+        }
+    ]
+}
+
