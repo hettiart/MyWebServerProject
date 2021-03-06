@@ -7,4 +7,4 @@ ssh -i /mnt/c/Users/user/Desktop/Git/kplabs-terraform.pem ec2-user@ec2-34-234-20
 curl -I "http://34.234.203.145/" 2>&1 >> results1.txt
 #Backup the results to AWS S3
 echo "Starting backup process: "
-aws s3 cp  'results1.txt'$'\r' s3://nginx-web-server-bucket/results1.txt
+aws s3 cp  results1.txt s3://nginx-web-server-bucket/results1.txt
